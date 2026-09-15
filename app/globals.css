@@ -1,0 +1,220 @@
+/* ---------------------------------------------------------
+   Fundamenty wizualne. Paleta budowana wokół światła mgły i
+   rdzy na starych barakach obserwacyjnych — nie wokół
+   typowego "SaaS-owego" fioletu z gradientem.
+   --------------------------------------------------------- */
+
+:root {
+  --ink-0: #12151a;
+  --ink-1: #191d24;
+  --ink-2: #21262f;
+  --ink-3: #2b323d;
+  --line: rgba(232, 224, 205, 0.1);
+  --line-strong: rgba(232, 224, 205, 0.22);
+
+  --parchment: #ece3cd;
+  --parchment-dim: #b6ad98;
+  --parchment-faint: #7d7a6f;
+
+  --rust: #c96f3d;
+  --rust-bright: #e2924f;
+  --moss: #8a9d72;
+  --mist: #6d8798;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 22px;
+
+  --wrap: 1180px;
+
+  --shadow-deep: 0 24px 60px -30px rgba(0, 0, 0, 0.65);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ink-0);
+  background-image:
+    radial-gradient(ellipse 900px 500px at 12% -10%, rgba(201, 111, 61, 0.14), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 88% 8%, rgba(109, 135, 152, 0.12), transparent 55%);
+  color: var(--parchment);
+  font-family: ui-sans-serif, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+  font-weight: 600;
+  line-height: 1.18;
+  margin: 0 0 0.5em;
+  letter-spacing: 0.1px;
+}
+
+p {
+  margin: 0 0 1em;
+  color: var(--parchment-dim);
+}
+
+a {
+  color: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  padding-left: 1.15em;
+}
+
+button {
+  font: inherit;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rust-bright);
+  font-weight: 600;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--rust-bright);
+}
+
+.panel {
+  background: linear-gradient(180deg, var(--ink-1), var(--ink-2));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--rust), var(--rust-bright));
+  color: #1a1206;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--line-strong);
+  color: var(--parchment);
+}
+
+.btn-ghost:hover {
+  border-color: var(--rust-bright);
+}
+
+.section {
+  padding-block: clamp(52px, 8vw, 108px);
+}
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: clamp(28px, 5vw, 48px);
+}
+
+.section-head h2 {
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  color: var(--parchment);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--parchment-dim);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--rust);
+  color: #1a1206;
+  padding: 10px 16px;
+  z-index: 100;
+  border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+@media (max-width: 880px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid-3 > *,
+  .grid-4 > * {
+    grid-column: span 1;
+  }
+}

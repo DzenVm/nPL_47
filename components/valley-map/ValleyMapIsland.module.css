@@ -1,0 +1,99 @@
+.frame {
+  position: relative;
+  background: linear-gradient(180deg, #191d24, #14171c);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--parchment-faint);
+  background: rgba(18, 21, 26, 0.7);
+  border: 1px solid var(--line-strong);
+  padding: 4px 10px;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.frame :global(.vm-hud) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0 10px;
+}
+
+.frame :global(.vm-stat) {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  min-width: 78px;
+}
+
+.frame :global(.vm-stat-label) {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--parchment-faint);
+}
+
+.frame :global(.vm-stat-val) {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--rust-bright);
+}
+
+.frame :global(.vm-reset) {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--parchment-dim);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.frame :global(.vm-reset):hover {
+  border-color: var(--rust-bright);
+  color: var(--parchment);
+}
+
+.frame :global(.vm-svg) {
+  width: 100%;
+  height: auto;
+}
+
+.frame :global(.vm-tile) {
+  cursor: pointer;
+}
+
+.frame :global(.vm-tile polygon) {
+  transition: fill 0.25s ease, opacity 0.2s ease;
+}
+
+.frame :global(.vm-tile:hover polygon) {
+  opacity: 0.75;
+}
+
+.frame :global(.vm-mark) {
+  fill: var(--parchment-faint);
+  font-family: ui-serif, Georgia, serif;
+  pointer-events: none;
+  user-select: none;
+}
+
+.frame :global(.vm-caption) {
+  margin: 8px 4px 2px;
+  font-size: 0.9rem;
+  color: var(--parchment-dim);
+  min-height: 2.6em;
+}

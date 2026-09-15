@@ -1,0 +1,59 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(18, 21, 26, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-block: 16px;
+}
+
+.logoSlot {
+  width: 34px;
+  height: 34px;
+}
+
+.nav {
+  display: flex;
+  gap: 26px;
+  margin-left: 4px;
+  flex: 1;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--parchment-dim);
+  font-size: 0.92rem;
+  transition: color 0.15s ease;
+}
+
+.navLink:hover {
+  color: var(--parchment);
+}
+
+.cta {
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--rust-bright);
+  border: 1px solid rgba(226, 146, 79, 0.4);
+  padding: 9px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.cta:hover {
+  border-color: var(--rust-bright);
+}
+
+@media (max-width: 760px) {
+  .nav {
+    display: none;
+  }
+}
