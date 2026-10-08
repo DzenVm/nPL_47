@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://przyklad-domeny-zostanie-podmieniona.pl/sitemap.xml",
+    sitemap: "https://zervuqanil.click/sitemap.xml",
   };
 }

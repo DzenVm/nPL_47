@@ -13,7 +13,7 @@ export default function SiteFooter() {
             bez trybu wieloosobowego.
           </p>
           <p className={styles.domainPlaceholder}>
-            Docelowy adres: <span>[domena zostanie uzupełniona]</span>
+            Adres strony: <a href="https://zervuqanil.click" className={styles.domainLink}>zervuqanil.click</a>
           </p>
         </div>
         <nav className={styles.col} aria-label="Informacje prawne">

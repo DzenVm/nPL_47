@@ -27,9 +27,8 @@
   color: var(--parchment-faint);
 }
 
-.domainPlaceholder span {
+.domainLink {
   color: var(--rust-bright);
-  font-style: italic;
 }
 
 .link {

@@ -4,7 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://przyklad-domeny-zostanie-podmieniona.pl"),
+  metadataBase: new URL("https://zervuqanil.click"),
   title: {
     default: "Strategia przeglądarkowa o dolinie odciętej Zasłoną",
     template: "%s",

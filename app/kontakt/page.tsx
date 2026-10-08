@@ -27,7 +27,7 @@ export default function ContactPage() {
           <li>wnioski związane z danymi przekazanymi w wiadomości.</li>
         </ul>
         <p>
-          Adres docelowy: <em>kontakt@[domena zostanie uzupełniona]</em>
+          Adres docelowy: <em>kontakt@zervuqanil.click</em>
         </p>
       </div>
     </article>

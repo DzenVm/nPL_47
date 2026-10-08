@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://przyklad-domeny-zostanie-podmieniona.pl";
+const BASE_URL = "https://zervuqanil.click";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ["", "/o-mechanice", "/zasady", "/polityka-prywatnosci", "/kontakt"];
